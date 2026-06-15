@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "fortls-lsp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fortran language server (fortls) for Claude Code — hover, go-to-definition, references, and diagnostics for Fortran source files",
   "author": { "name": "Seth Underwood" },
   "license": "Apache-2.0",

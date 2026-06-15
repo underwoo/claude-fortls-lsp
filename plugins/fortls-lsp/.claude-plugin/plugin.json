@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Fortran language server (fortls) for Claude Code — hover, go-to-definition, references, and diagnostics for Fortran source files",
   "author": { "name": "Seth Underwood" },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "lspServers": {
     "fortls": {
       "command": "fortls",

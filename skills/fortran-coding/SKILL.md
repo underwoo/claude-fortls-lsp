@@ -8,6 +8,14 @@ version: 1.0.0
 
 This skill has already been loaded automatically. Do not attempt to invoke it again by name — proceed directly with the LSP tool as described below.
 
+Before calling the LSP tool for the first time in a session, load its schema with ToolSearch to ensure the correct parameters are used:
+
+```
+ToolSearch: select:LSP
+```
+
+Skipping this step causes InputValidationError because the tool's parameter schema is not yet known.
+
 **Do not use grep, Bash, or Read to explore Fortran code structure.** Always use the LSP tool instead — it has direct knowledge of types, signatures, and cross-file relationships that text search cannot provide.
 
 ## Required Behavior

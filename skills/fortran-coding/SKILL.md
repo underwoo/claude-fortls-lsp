@@ -1,5 +1,5 @@
 ---
-name: fortran-coding
+name: fortls-lsp
 description: Use when working with Fortran source files (.f90, .f, .f03, .f08, .for, .fpp, .F90, .F, .F03, .F08, .FOR, .FPP) or when asked questions about Fortran code, subroutines, modules, functions, or variables
 version: 1.0.0
 ---

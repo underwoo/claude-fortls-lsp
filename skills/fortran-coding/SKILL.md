@@ -34,6 +34,8 @@ Only fall back to Read or grep when the LSP tool returns an error or the file ty
 2. Call the appropriate LSP operation with the absolute file path, 1-based line, and 1-based character offset
 3. Use the result to answer questions or inform edits — do not re-read the file to verify what LSP already returned
 
+**`filePath` must always point to a file, never a directory** — even for workspace-wide operations like `workspaceSymbol`. The file acts as an anchor to identify which LSP server instance to query. For `workspaceSymbol`, pass any Fortran source file from the project as the anchor.
+
 ## Notes
 
 - Line and character numbers are 1-based

@@ -1,0 +1,12 @@
+# Claude Code per-project plugin state (user-local, not committed)
+.claude/*.local.md
+.claude/*.local.json
+
+# macOS
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo

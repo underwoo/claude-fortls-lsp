@@ -1,0 +1,27 @@
+{
+  "name": "fortls-lsp",
+  "version": "1.0.0",
+  "description": "Fortran language server (fortls) for Claude Code — hover, go-to-definition, references, and diagnostics for Fortran source files",
+  "author": { "name": "your-team" },
+  "license": "MIT",
+  "lspServers": {
+    "fortls": {
+      "command": "fortls",
+      "args": ["--stdio"],
+      "extensionToLanguage": {
+        ".f90": "fortran",
+        ".f":   "fortran",
+        ".f03": "fortran",
+        ".f08": "fortran",
+        ".for": "fortran",
+        ".fpp": "fortran",
+        ".F90": "fortran",
+        ".F":   "fortran",
+        ".F03": "fortran",
+        ".F08": "fortran",
+        ".FOR": "fortran",
+        ".FPP": "fortran"
+      }
+    }
+  }
+}

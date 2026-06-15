@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "fortls",
+    "fortran",
+    "fpp",
+    "pipx",
+    "pipxproject",
+    "lspservers",
+    "lspserver",
+    "mcpb",
+    "nthreads",
+    "stdio",
+    "subroutine",
+    "namelist",
+    "allocatable",
+    "deallocate",
+    "readthedocs",
+    "streetside",
+    "cspell"
+  ],
+  "ignorePaths": [
+    ".git/**",
+    "LICENSE"
+  ]
+}

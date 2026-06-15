@@ -29,38 +29,23 @@ Verify: `fortls --version`
 ## Installation
 
 ```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/underwoo/claude-fortls-lsp.git ~/.claude/skills/fortls-lsp
+claude plugin marketplace add underwoo/claude-fortls-lsp
+claude plugin install fortls-lsp
 ```
 
 Then restart Claude Code, or run `/reload-plugins` in an existing session.
-The plugin auto-loads from `~/.claude/skills/` — no `claude plugin enable` needed.
-
-Verify the plugin loaded correctly:
-
-```bash
-claude plugin list
-```
-
-You should see `fortls-lsp@skills-dir` with status `✔ loaded` under
-"Skills-directory plugins". If it does not appear, check that the clone
-landed in the right place:
-
-```bash
-ls ~/.claude/skills/fortls-lsp/.claude-plugin/plugin.json
-```
 
 To update later:
 
 ```bash
-git -C ~/.claude/skills/fortls-lsp pull
+claude plugin update fortls-lsp
 ```
 
 Then run `/reload-plugins` or restart.
 
 ## Verification
 
-After enabling, restart Claude Code, then open a Fortran source file and ask
+After installing, restart Claude Code, then open a Fortran source file and ask
 Claude a question about a symbol (e.g. "what does this subroutine do?"). Claude
 should use the LSP `hover` operation automatically. You can also ask Claude to
 run `documentSymbol` on the file to list all subroutines and functions.

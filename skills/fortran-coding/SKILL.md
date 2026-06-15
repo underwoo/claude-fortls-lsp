@@ -6,6 +6,8 @@ version: 1.0.0
 
 # Fortran Code Intelligence via fortls
 
+This skill has already been loaded automatically. Do not attempt to invoke it again by name — proceed directly with the LSP tool as described below.
+
 **Do not use grep, Bash, or Read to explore Fortran code structure.** Always use the LSP tool instead — it has direct knowledge of types, signatures, and cross-file relationships that text search cannot provide.
 
 ## Required Behavior

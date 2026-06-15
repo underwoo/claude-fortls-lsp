@@ -31,7 +31,7 @@ Verify: `fortls --version`
 Clone directly into Claude Code's built-in plugin directory, then enable:
 
 ```bash
-git clone git@your-org:fortls-lsp.git ~/.claude/skills/fortls-lsp
+git clone https://github.com/underwoo/claude-fortls-lsp.git ~/.claude/skills/fortls-lsp
 claude plugin enable fortls-lsp@skills-dir
 ```
 

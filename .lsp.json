@@ -1,0 +1,20 @@
+{
+  "fortls": {
+    "command": "fortls",
+    "args": [],
+    "extensionToLanguage": {
+      ".f90": "fortran",
+      ".f":   "fortran",
+      ".f03": "fortran",
+      ".f08": "fortran",
+      ".for": "fortran",
+      ".fpp": "fortran",
+      ".F90": "fortran",
+      ".F":   "fortran",
+      ".F03": "fortran",
+      ".F08": "fortran",
+      ".FOR": "fortran",
+      ".FPP": "fortran"
+    }
+  }
+}

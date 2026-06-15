@@ -6,7 +6,8 @@ using [fortls](https://fortls.readthedocs.io/).
 
 ## Supported Extensions
 
-`.f90`, `.f`, `.f03`, `.f08`, `.for`, `.fpp` and their uppercase preprocessed variants `.F90`, `.F`, `.F03`, `.F08`, `.FOR`, `.FPP`
+`.f90`, `.f`, `.f03`, `.f08`, `.for`, `.fpp` and their uppercase preprocessed
+variants `.F90`, `.F`, `.F03`, `.F08`, `.FOR`, `.FPP`
 
 ## Prerequisites
 
@@ -71,9 +72,9 @@ For best results, add a `.fortls` config file to your **Fortran project root**
 ```
 
 Adjust `source_dirs` to match your project layout — this is the most important
-setting for cross-file symbol resolution. See the
-[fortls configuration reference](https://fortls.readthedocs.io/en/latest/options.html)
-for all options.
+setting for cross-file symbol resolution. See the [fortls configuration
+reference](https://fortls.readthedocs.io/en/latest/options.html) for all
+options.
 
 ## What Claude Can Do With This Plugin
 

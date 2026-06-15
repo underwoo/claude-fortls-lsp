@@ -28,14 +28,27 @@ Verify: `fortls --version`
 
 ## Installation
 
-Clone directly into Claude Code's built-in plugin directory:
-
 ```bash
+mkdir -p ~/.claude/skills
 git clone https://github.com/underwoo/claude-fortls-lsp.git ~/.claude/skills/fortls-lsp
 ```
 
 Then restart Claude Code, or run `/reload-plugins` in an existing session.
 The plugin auto-loads from `~/.claude/skills/` — no `claude plugin enable` needed.
+
+Verify the plugin loaded correctly:
+
+```bash
+claude plugin list
+```
+
+You should see `fortls-lsp@skills-dir` with status `✔ loaded` under
+"Skills-directory plugins". If it does not appear, check that the clone
+landed in the right place:
+
+```bash
+ls ~/.claude/skills/fortls-lsp/.claude-plugin/plugin.json
+```
 
 To update later:
 

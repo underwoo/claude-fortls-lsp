@@ -6,39 +6,26 @@ version: 1.0.0
 
 # Fortran Code Intelligence via fortls
 
-When working with Fortran files, use the built-in LSP tool to get accurate information before answering or editing.
+**Do not use grep, Bash, or Read to explore Fortran code structure.** Always use the LSP tool instead — it has direct knowledge of types, signatures, and cross-file relationships that text search cannot provide.
 
-## Available LSP Operations
+## Required Behavior
 
-- **hover** — type info and documentation for a symbol (what does this variable/subroutine do, what type is it)
-- **goToDefinition** — find where a subroutine, function, or variable is declared
-- **findReferences** — find all uses of a symbol across the project
-- **documentSymbol** — list all subroutines, functions, and modules defined in a file
-- **workspaceSymbol** — search for a symbol name across the entire project (requires a query string)
-- **goToImplementation** — find implementations of an interface
+- **Identifying what a symbol does** → LSP `hover` (not grep or Read)
+- **Finding where something is defined** → LSP `goToDefinition` (not grep)
+- **Finding all call sites** → LSP `findReferences` (not grep)
+- **Listing a file's subroutines and functions** → LSP `documentSymbol` (not grep or Read)
+- **Searching for a symbol by name** → LSP `workspaceSymbol` with a query string (not grep)
 
-## How to Use
+Only fall back to Read or grep when the LSP tool returns an error or the file type is not Fortran.
 
-1. Read the file to find the correct line and character position of the symbol you want to query
-2. Call the LSP tool with the absolute file path, 1-based line number, and 1-based character offset
-3. Use the result to answer questions or inform edits
+## How to Use the LSP Tool
 
-## Common Patterns
-
-**Before answering "what does X do?"**
-→ Use `hover` at the position of X
-
-**Before editing a subroutine signature**
-→ Use `findReferences` to find all call sites
-
-**To understand a file's structure**
-→ Use `documentSymbol` to get all subroutines and functions
-
-**To find where a module is defined**
-→ Use `goToDefinition` at a USE statement
+1. Use `documentSymbol` on the file first to find the line number of the target symbol
+2. Call the appropriate LSP operation with the absolute file path, 1-based line, and 1-based character offset
+3. Use the result to answer questions or inform edits — do not re-read the file to verify what LSP already returned
 
 ## Notes
 
-- fortls requires a `.fortls` config file or a `compile_commands.json` in the project root for full functionality
-- Line and character numbers are 1-based (as shown in editors)
-- Always provide absolute file paths to the LSP tool
+- Line and character numbers are 1-based
+- Always use absolute file paths
+- fortls resolves cross-file symbols best when the project has a `.fortls` config file in its root
